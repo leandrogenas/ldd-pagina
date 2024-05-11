@@ -1,3 +1,12 @@
+.ldd, .ldd>span {
+  font-family: 'Fira Code', sans-serif;
+  color: white;
+}
+
+.ponteiro {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 body {
   background: $body-background-color;
   color: $foreground-color;
@@ -6,16 +15,18 @@ body {
 }
 
 header {
-  font-size: 2em;
-  color: $caption-color;
-  text-align: center;
-  background: $foreground-color url('../images/design/heading.png') center 20px no-repeat;
-  padding: 60px 30px 30px;
-  background-size: 160px;
-  width: 90%;
-  margin: 20px auto;
-  position: relative;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom: 1px solid #0c28d6;
+  font-size: 1em;
+  color: $white;
+  text-align: left;
+  padding: 10px 30px;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  background-color: $cor-base;
 
   small {
     font-size: .5em;
@@ -152,9 +163,19 @@ code {
 }
 
 footer {
-  text-align: center;
-  padding-bottom: 20px;
-
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  background: rgb(73,96,238);
+  background: linear-gradient(0deg, rgba(73,96,238,0.3) 0%, rgba(245,245,245,1) 100%);
+  font-size: 0.7em;
   a:hover {
     color: $white;
   }

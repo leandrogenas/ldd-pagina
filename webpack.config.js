@@ -1,6 +1,6 @@
 /**
- * Webpack main configuration file
- */
+ ** Webpack main configuration file
+ **/
 const path = require('path');
 const fs = require('fs');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -117,6 +117,9 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
+          from: path.resolve(environment.paths.source, 'images', 'content')
+        },
+        {
           from: path.resolve(environment.paths.source, 'images', 'content'),
           to: path.resolve(environment.paths.output, 'images', 'content'),
           toType: 'dir',
@@ -131,6 +134,10 @@ module.exports = {
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],
           },
+        },
+        {
+          from: path.resolve(environment.paths.source, 'humans.txt'),
+          to: environment.paths.output,
         },
       ],
     }),
